@@ -68,7 +68,9 @@ docker run -d -p 5000:5000 erezazu/devops0405-docker-flask-app:v1
 ## 🧱 Run Using docker-compose
 
 
-docker-compose up --build
+docker-compose up 
+
+*** Option - build image with --build)
 
 Visit: [http://localhost:5000]
 
