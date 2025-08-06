@@ -1,4 +1,4 @@
-
+properties([parameters([choice(choices: ['Yes', 'No', 'Maybe', 'Sure'], description: 'Please choose your deploy something ', name: 'Deploy')])])
 
 pipeline {
     agent any
