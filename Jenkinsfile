@@ -10,6 +10,7 @@ pipeline {
                 script {
                     if (params.Deploy == "Yes") {
                         echo 'Hello World'
+                        input message: 'Where to Deploy', parameters: [choice(choices: ['Prod', 'Dev', 'Test', 'QA'], name: 'Where')]
                     }
                 }
                 sh 'echo hi'
