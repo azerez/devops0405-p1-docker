@@ -1,15 +1,17 @@
 properties([parameters([choice(choices: ['Yes', 'No', 'Maybe', 'Sure'], description: 'Please choose your deploy something ', name: 'Deploy')])])
 
+
 pipeline {
     agent any
 
     stages {
         stage('Hello') {
             steps {
-                scripts {
-                    if (params.Deploy == "Yes"){
-                    echo 'Hello World'
+                script {
+                    if (params.Deploy == "Yes") {
+                        echo 'Hello World'
                     }
+                }
                 sh 'echo hi'
             }
         }
@@ -38,4 +40,3 @@ pipeline {
         }
     }
 }
-
